@@ -1,0 +1,304 @@
+@import "variables";
+@import "mixines";
+
+.container__part {
+  overflow-y: hidden;
+  height: 100%;
+}
+
+
+.part_one {
+  background: url("../img/img1.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 50%;
+  float: left;
+  max-height: 100vh;
+  /*@media screen and (min-width: $screen-md){
+    width: 30%;
+    height: 100vh;
+  }*/
+
+  /*@media screen and (min-width: $screen-xs) {
+    width: 30%;
+  }*/
+  /*@media screen and (min-width:  $screen-xxs) {
+    width: 0%;
+  }*/
+
+
+}
+
+.part_two {
+  width: 50%;
+  float: right;
+  margin: 0 auto;
+  padding: 124px 140px;
+  max-height: 100vh;
+  /* @media screen and (min-width: $screen-md) {
+     width: 50%;
+     padding: 100px 50px;
+   }
+   @media screen and (min-width: $screen-xs) {
+     width: 70%;
+     padding: 200px 60px;
+   }*/
+  /*@media screen and (min-width:  $screen-xxs) {
+    width: 100%;
+    padding: 200px 120px;
+  }*/
+
+}
+
+.logo {
+  @include font($spartan, 40px, 400, $regMainColor);
+  /* @media screen and (min-width: $screen-md) {
+     @include font($spartan, 36px, 400, $regMainColor);
+   }
+   @media screen and (min-width: $screen-xs) {
+     width: 70%;
+     @include font($spartan, 46px, 400, $regMainColor);
+   }*/
+
+}
+
+.title {
+  margin-top: 110px;
+  @include font($lora, 36px, 700, $regMainColor);
+}
+
+.title__register {
+  margin-top: 60px;
+  @include font($lora, 36px, 700, $regMainColor);
+  /*@media screen and (min-width: $screen-md) {
+    margin-top: 40px;
+    @include font($lora, 30px, 700, $regMainColor);
+  }
+  @media screen and (min-width: $screen-xs) {
+    margin-top: 70px;
+    @include font($lora, 40px, 700, $regMainColor);
+  }*/
+}
+
+/** Input **/
+
+.input_name {
+  margin: 40px 0 30px 0;
+  @include font($lora, 14px, 400, $regMainColor);
+  /*@media screen and (min-width: $screen-md) {
+    margin: 35px 0 15px 0;
+  }
+  @media screen and (min-width: $screen-xs) {
+    margin: 40px 0 30px 0;
+    @include font($lora, 16px, 400, $regMainColor);
+  }*/
+}
+
+.input {
+  width: 100%;
+  background: $white;
+  border: 1px solid $borderColor1;
+  @include border-radius(5px);
+  padding: 24px;
+  /*@media screen and (min-width: $screen-md) {
+    padding: 16px;
+  }
+  @media screen and (min-width: $screen-xs) {
+    padding: 30px;
+  }*/
+
+  &:hover {
+    border: 1px solid $linksColor;
+  }
+}
+
+/* Creation */
+
+.creation {
+  display: flex;
+  margin: 20px 0px 0px 0px;
+}
+
+.creation__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.creation__item {
+  font-size: 16px;
+}
+
+.creation__check {
+  margin: 0px 10px 0px 0px;
+  width: 14px;
+  height: 14px;
+  background: $white;
+  border: 1px solid $borderColor3;
+  @include border-radius(3px);
+}
+
+.creation__text {
+  font-family: $lora;
+}
+
+.creation__link {
+  text-decoration: none;
+  color: $linksColor;
+}
+
+/* Button */
+
+.button {
+  width: 100%;
+  height: 48px;
+  margin-top: 24px;
+  @include border-radius(5px);
+  text-decoration: none;
+  outline: none;
+  border: none;
+  @include font($lora, 16px, 700, $white);
+  /*@media screen and (min-width: $screen-md) {
+    height: 40px;
+  }
+  @media screen and (min-width: $screen-xs) {
+    height: 60px;
+    margin-top: 35px;
+    @include font($lora, 18px, 700, $white);
+  }*/
+}
+
+.btn-1 {
+  background: $btn1Color;
+  border-color: $btn1Color;
+  @include transition(background 0.2s linear);
+
+  &:hover {
+    background: $btn1ColorHover;
+    border-color: $btn1ColorHover;
+
+  }
+}
+
+.btn-2 {
+  background: $btn2Color;
+  border-color: $btn2Color;
+  @include transition(background 0.2s linear);
+
+  &:hover {
+    background: $btn2ColorHover;
+    border-color: $btn2ColorHover;
+
+  }
+}
+
+/*Link*/
+
+.link {
+  @include font($lora, 16px, 400, $linksColor);
+  text-decoration: none;
+}
+
+.link-reg {
+  margin-left: 20px;
+}
+
+.text {
+  @include font($lora, 16px, 400, $regMainColor);
+  margin-top: 24px;
+  /*@media screen and (min-width: $screen-xs) {
+    margin-top: 35px;
+  }*/
+}
+
+
+@media (max-width: $screen-md) {
+  .part_one {
+    width: 30%;
+  }
+
+  .part_two {
+    width: 70%;
+    padding: 200px 60px;
+  }
+
+  .logo {
+    @include font($spartan, 36px, 400, $regMainColor);
+  }
+
+  .title__register {
+    margin-top: 40px;
+    @include font($lora, 30px, 700, $regMainColor);
+  }
+
+  .input_name {
+    margin: 35px 0 15px 0;
+  }
+
+  .input {
+    padding: 18px;
+  }
+
+  .button {
+    height: 44px;
+  }
+
+}
+
+@media (max-width: $screen-xs) {
+  .part_one {
+    width: 0%;
+  }
+
+  .part_two {
+    width: 100%;
+    padding: 200px 100px;
+  }
+
+  .logo {
+    @include font($spartan, 30px, 400, $regMainColor);
+  }
+
+  .title__register {
+    @include font($lora, 26px, 700, $regMainColor);
+  }
+
+
+}
+
+@media (max-width: $screen-xxs) {
+
+
+  .logo {
+    @include font($spartan, 26px, 400, $regMainColor);
+  }
+
+  .title__register {
+    @include font($lora, 20px, 700, $regMainColor);
+  }
+
+  .input_name {
+    @include font($lora, 11px, 400, $regMainColor);
+  }
+
+  .button {
+    @include font($lora, 12px, 700, $white);
+  }
+
+  .text {
+    @include font($lora, 12px, 400, $regMainColor);
+  }
+
+  .link {
+    @include font($lora, 12px, 400, $linksColor);
+  }
+
+  .part_two {
+    padding: 60px 30px;
+  }
+
+}
+
+
+
